@@ -1,2 +1,12 @@
-다각형 어노테이션
+.. _geometryAnnotation:
+
+다각형 어노테이션 편집
 ===================================================
+
+.. image:: _static/images/geometryAnnotationScreen.png
+    :align: center
+    :alt: 다각형 어노테이션 편집 스크린샷
+
+[보완 예정]
+
+https://github.com/microsoft/VoTT/blob/master/README.md 참조
