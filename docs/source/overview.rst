@@ -24,3 +24,4 @@
 5. :ref:`어노테이션 결과 JSON 파일 산출<export>`
 6. 검수
 
+본 어노테이션 도구는 Microsoft 사의 Visual Object Tagging Tool (VoTT)를 기반으로 만들었습니다. (프로젝트 링크: https://github.com/microsoft/VoTT)
