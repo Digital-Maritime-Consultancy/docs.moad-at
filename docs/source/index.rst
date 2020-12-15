@@ -15,11 +15,13 @@ MOAD 어노테이션 도구 사용자 매뉴얼
 
    overview
    prerequisite
+   project
+   projectFiles
+   projectCreation
+   annotation
    geometryAnnotation
    segmentAnnotation
    imageMetadata
-   projectCreation
-   projectSaveLoad
    export
    segmentationDataGeneration
 
