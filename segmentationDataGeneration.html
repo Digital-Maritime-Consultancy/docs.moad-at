@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="kr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>세그멘테이션 데이터 생성 &mdash; MOAD annotation tool 0.6 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/css-style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="어노테이션 결과 산출" href="export.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MOAD annotation tool
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">목 차:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">도구 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisite.html">어노테이션 작업 전 준비 사항</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">프로젝트 관리</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectFiles.html">프로젝트 파일</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectCreation.html">프로젝트 생성</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">어노테이션</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometryAnnotation.html">다각형 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="segmentAnnotation.html">세그먼트 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imageMetadata.html">이미지 메타데이터 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">어노테이션 결과 산출</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">세그멘테이션 데이터 생성</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MOAD annotation tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>세그멘테이션 데이터 생성</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/segmentationDataGeneration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="segmentationdatageneration">
+<span id="id1"></span><h1>세그멘테이션 데이터 생성<a class="headerlink" href="#segmentationdatageneration" title="Permalink to this headline">¶</a></h1>
+<p>본 어노테이션 도구의 '세그먼트 어노테이션 편집'을 수행하기 위해선 각 이미지의 세그멘테이션 데이터가 필요합니다.</p>
+<p>어노테이션 도구 v0.6에선 세그멘테이션 데이터 생성 기능이 제공되지 않기 때문에 아래의 파이썬 스크립트를 사전에 수행하여 생성해두셔야 합니다.</p>
+<p><strong>파이썬 스크립트 링크</strong>:</p>
+<p><a class="reference external" href="https://github.com/Digital-Maritime-Consultancy/docs.moad-at/blob/master/docs/source/_static/codes/exportSegmentation.py">https://github.com/Digital-Maritime-Consultancy/docs.moad-at/blob/master/docs/source/_static/codes/exportSegmentation.py</a></p>
+<p><strong>실행 요구사항</strong>:</p>
+<ul class="simple">
+<li><p>파이썬 버전 3.7 이상</p></li>
+<li><p>scikit-image 0.17.2 이상 설치</p></li>
+</ul>
+<p>스크립트 수행 전 이미지들을 한 폴더 안에 준비해 놓습니다. 본 예제에선 'images' 폴더를 사용합니다.</p>
+<p>스크립트 수행 방식은 스크립트 코드 내에서 아래의 함수를 실행하는 것이며 각 파라미터는 다음과 같습니다: 이미지 폴더, 산출 폴더, 산출 해상도 너비, 산출 해상도 높이:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;./images&#39;</span><span class="p">,</span> <span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">768</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>해당 스크립트는 아래와 같이 터미널에서도 수행하실 수 있습니다. 파라미터의 순서와 의미는 상기와 동일합니다:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">exportSegmentation</span><span class="o">.</span><span class="n">py</span> <span class="o">./</span><span class="n">images</span> <span class="o">./</span> <span class="mi">1024</span> <span class="mi">768</span>
+</pre></div>
+</div>
+<p>산출물로 이미지 파일과 동일한 수의 .seg 파일들이 지정된 산출 폴더에 생성될 것입니다.</p>
+<p>모든 .seg 파일들은 프로젝트의 Metadata connection에서 지정하는 폴더 내에 위치시킵니다.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="export.html" class="btn btn-neutral float-left" title="어노테이션 결과 산출" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Digital Maritime Consultancy ApS.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
