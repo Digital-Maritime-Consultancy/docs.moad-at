@@ -27,18 +27,4 @@
 
 사용자는 각 어노테이션 편집기 인터페이스의 (B) 이미지 목록의 우측 상단 표식을 통해 각 이미지(어셋)의 어노테이션 진행 상태를 알 수 있습니다.
 
-.. figure:: _static/images/screenshots/viewed.png
-    :align: center
-    :alt: 방문
-
-    이미지(어셋)을 방문한 상태, 어노테이션은 진행되지 않음
-
-상기 표식이 없는 이미지(어셋)은 방문되지 않은 상태이며 산출 옵션에 따라 결과물 산출 시 배제될 수 있습니다.
-
-.. figure:: _static/images/screenshots/tagged.png
-    :align: center
-    :alt: 어노테이션 진행
-
-    이미지(어셋)의 어노테이션이 진행된 상태
-
 
