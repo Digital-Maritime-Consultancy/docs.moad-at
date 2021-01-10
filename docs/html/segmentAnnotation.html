@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>세그먼트 어노테이션 편집 &#8212; MOAD Annotation Tool 0.6 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/css-style.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="이미지 메타데이터 편집" href="imageMetadata.html" />
+    <link rel="prev" title="다각형 어노테이션 편집" href="geometryAnnotation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <span class="target" id="segmentannotation"></span><div class="section" id="id1">
+<h1>세그먼트 어노테이션 편집<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>본 페이지에서는 세그먼트 어노테이션 편집기를 이용한 어노테이션 방법에 대하여 서술합니다.</p>
+<p>세그먼트 어노테이션은 세그먼테이션을 통해 생성된 세그먼트들에 태그 및 속성을 설정하는 방식으로 어노테이션 작업을 수행합니다.</p>
+<p>본 세그먼트 어노테이션을 수행하기 위해선 세그멘테이션 데이터 값을 불러올 수 있어야 합니다. 보다 자세한 사항은 <a class="reference internal" href="prerequisite.html#prerequisite"><span class="std std-ref">사전 준비</span></a> 를 참조해주세요.</p>
+<div class="section" id="id2">
+<h2>인터페이스<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>아래 그림은 주 메뉴에서 세그먼트 어노테이션 편집을 선택했을 때 보이는 인터페이스를 나타냅니다.</p>
+<div class="figure align-center" id="id6">
+<img alt="세그먼트 어노테이션 편집 스크린샷" src="_images/segmentAnnotationScreen.png" />
+<p class="caption"><span class="caption-text">세그먼트 어노테이션 편집 인터페이스</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>상기 인터페이스의 각 화면 영역의 기능은 다음과 같습니다.</p>
+<p>(A): 주 메뉴,
+(B): 이미지 목록,
+(C): 편집 도구,
+(D): 어노테이션 태그 편집,
+(E): 주 편집 화면,
+(F): 어노테이션 속성 편집</p>
+<p>(A)에 대한 설명은 주 메뉴 설명&lt;mainMenu&gt; 을 참조해주세요.</p>
+<p>사용자는 (B)를 통해 편집할 이미지를 선택하고 (C), (D), (E)를 통해 어노테이션을 생성한 후 (F)를 통해 선택된 어노테이션에 대한 속성을 편집하게 됩니다.</p>
+<div class="section" id="c">
+<h3>편집 도구 설명 - 인터페이스 (C)<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><img alt="icon_select" src="_images/select.png" />: 선택, 영역을 선택하거나 편집할 때 사용합니다.</p></li>
+<li><p><img alt="icon_annoSeg" src="_images/annoSeg.png" />: 어노테이션 생성, 마우스 왼쪽 버튼 드래그를 이용하여 (D)에서 선택된 태그에 대한 어노테이션을 생성합니다.</p></li>
+<li><p><img alt="icon_remoSeg" src="_images/remoSeg.png" />: 어노테이션 제거, 마우스 왼쪽 버튼 드래그를 이용하여 어노테이션을 제거합니다.</p></li>
+<li><p><img alt="icon_remoAll" src="_images/remoAll.png" />: 모든 어노테이션 제거, 모든 세그먼트의 어노테이션을 제거합니다.</p></li>
+<li><p><img alt="icon_actLearn" src="_images/actLearn.png" />: 자동 어노테이션, 현재 버전에선 사용 불가합니다.</p></li>
+<li><p><img alt="icon_prev" src="_images/prev.png" />: 이전 어셋, 이전 이미지 및 작업으로 이동합니다.</p></li>
+<li><p><img alt="icon_next" src="_images/next.png" />: 다음 어셋, 다음 이미지 및 작업으로 이동합니다.</p></li>
+<li><p><img alt="icon_saveProj" src="_images/saveProj.png" />: 프로젝트 저장, 프로젝트를 저장합니다.</p></li>
+<li><p><img alt="icon_exportAnno" src="_images/exportAnno.png" />: 프로젝트 내보내기, 프로젝트 산출물을 생성합니다. 자세한 내용은 <a class="reference internal" href="export.html#export"><span class="std std-ref">어노테이션 결과 산출</span></a> 를 참조해주세요.</p></li>
+</ul>
+</div>
+<div class="section" id="d">
+<h3>어노테이션 태그 선택 - 인터페이스 (D)<a class="headerlink" href="#d" title="Permalink to this headline">¶</a></h3>
+<p>인터페이스의 (D) 영역을 통해 어노테이션 태그를 적용할 수 있습니다. 하나의 영역은 하나의 태그만 적용이 가능합니다.</p>
+</div>
+<div class="section" id="e">
+<h3>어노테이션 생성 - 인터페이스 (E)<a class="headerlink" href="#e" title="Permalink to this headline">¶</a></h3>
+<p>상기 편집 도구 중 <img alt="icon_annoSeg" src="_images/annoSeg.png" /> 가 선택된 상태에서 마우스 왼쪽 드래그를 통해 상기 단계에서 선택된 어노테이션을 세그먼트에 마킹합니다.</p>
+</div>
+<div class="section" id="id3">
+<h3>어노테이션 삭제 - 인터페이스 (E)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>상기 편집 도구 중 <img alt="icon_remoSeg" src="_images/remoSeg.png" /> 가 선택된 상태에서 마우스 왼쪽 드래그를 통해 해당 세그먼트의 어노테이션을 삭제합니다.
+상기 편집 도구 중 <img alt="icon_annoSeg" src="_images/annoSeg.png" /> 가 선택된 상태에서도 마우스 오른쪽 드래그를 이용해 같은 작업을 수행할 수 있습니다.</p>
+</div>
+<div class="section" id="id4">
+<h3>어노테이션 선택 - 인터페이스 (E)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p><img alt="icon_select" src="_images/select.png" /> 아이콘을 눌러 세그먼트의 어노테이션을 선택합니다.</p>
+<p>어노테이션이 선택되었을 때 인터페이스의 (D) 영역은 해당 어노테이션 태그 값을, 인터페이스의 (F) 영역은 해당 어노테이션 속성 값을 표출합니다.</p>
+</div>
+<div class="section" id="f">
+<h3>어노테이션 속성 편집 - 인터페이스 (F)<a class="headerlink" href="#f" title="Permalink to this headline">¶</a></h3>
+<p>어노테이션이 선택된 상태에서 인터페이스의 (F) 영역을 통해 어노테이션 속성을 편집할 수 있습니다. 해당 영역은 어노테이션이 선택되었을 때만 활성화됩니다. 편집 후 반드시 하단의 submit 버튼을 눌러 저장을 수행합니다.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>단축키<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>세그먼트 어노테이션 편집기는 아래와 같은 단축키를 지원합니다.</p>
+<img alt="세그먼트 어노테이션 편집 단축키" class="align-center" src="_images/segmentShortcut.png" />
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MOAD Annotation Tool</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">목 차:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">도구 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisite.html">어노테이션 작업 전 준비 사항</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">프로젝트 관리</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectFiles.html">프로젝트 파일</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectCreation.html">프로젝트 생성</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">어노테이션</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometryAnnotation.html">다각형 어노테이션 편집</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">세그먼트 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imageMetadata.html">이미지 메타데이터 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">어노테이션 결과 산출</a></li>
+<li class="toctree-l1"><a class="reference internal" href="segmentationDataGeneration.html">세그멘테이션 데이터 생성</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="geometryAnnotation.html" title="previous chapter">다각형 어노테이션 편집</a></li>
+      <li>Next: <a href="imageMetadata.html" title="next chapter">이미지 메타데이터 편집</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Jinki Jung.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/segmentAnnotation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

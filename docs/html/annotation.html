@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>어노테이션 &#8212; MOAD Annotation Tool 0.6 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/css-style.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="다각형 어노테이션 편집" href="geometryAnnotation.html" />
+    <link rel="prev" title="프로젝트 생성" href="projectCreation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="annotation">
+<span id="id1"></span><h1>어노테이션<a class="headerlink" href="#annotation" title="Permalink to this headline">¶</a></h1>
+<p>이미지 어노테이션(Annotation)은 영상 이미지와 관련된, 사람이 인지 가능한 객체, 환경, 상황에 대한 표식으로 정의될 수 있으며, 라벨, 레이블, 태그 등으로도 알려져 있습니다.</p>
+<p>이미지 어노테이션 작업은 영상 이미지 내에 어노테이션을 남김으로써 추후 인공지능 학습에 활용할 데이터를 생성하는 작업이며, 라벨링, 태깅 등으로도 불립니다.</p>
+<p>이미지 어노테이션의 정보는 이미지의 전체 혹은 부분과 반드시 연관되어 있어야 하며, 인공지능은 해당 연관성을 학습하게 됩니다.</p>
+<p>본 어노테이션 도구는 아래의 두 가지 형식의 어노테이션을 지원합니다.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="geometryAnnotation.html#geometryannotation"><span class="std std-ref">다각형 어노테이션</span></a>: 바운딩 박스, 폴리곤, 선분 등의 다각형 정보를 이용한 어노테이션</p></li>
+<li><p><a class="reference internal" href="segmentAnnotation.html#segmentannotation"><span class="std std-ref">세그먼트 어노테이션</span></a>: 세그멘테이션 기법을 통해 산출된 세그멘트를 이용한 어노테이션</p></li>
+</ul>
+<p>다각형 어노테이션의 특징은 이미지에 다각형을 추가하여 어노테이션을 특정하기 때문에 겹쳐진 객체에 대한 별도의 표기가 가능하다는 점입니다.</p>
+<p>세그먼트 어노테이션은 한 이미지를 여러 세그먼트로 나누어 각 세그먼트의 연관 정보를 기입하는 형식이기 때문에 겹쳐진 객체는 하나의 어노테이션으로 특정됩니다.</p>
+<p>어노테이션 방식은 각 어노테이션 편집마다 상이합니다. 보다 자세한 사항은 각 어노테이션 설명 페이지를 참조해주세요.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MOAD Annotation Tool</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">목 차:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">도구 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisite.html">어노테이션 작업 전 준비 사항</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">프로젝트 관리</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectFiles.html">프로젝트 파일</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectCreation.html">프로젝트 생성</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">어노테이션</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometryAnnotation.html">다각형 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="segmentAnnotation.html">세그먼트 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imageMetadata.html">이미지 메타데이터 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">어노테이션 결과 산출</a></li>
+<li class="toctree-l1"><a class="reference internal" href="segmentationDataGeneration.html">세그멘테이션 데이터 생성</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="projectCreation.html" title="previous chapter">프로젝트 생성</a></li>
+      <li>Next: <a href="geometryAnnotation.html" title="next chapter">다각형 어노테이션 편집</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Jinki Jung.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/annotation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
