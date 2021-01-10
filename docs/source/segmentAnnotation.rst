@@ -1,6 +1,6 @@
 .. _segmentAnnotation:
 
-.. |icon_test| image:: _static/images/segmentAnnotationScreen.png
+.. |icon_test| image:: _static/images/icons/activeLearning.png
 
 세그먼트 어노테이션 편집
 ===================================================
