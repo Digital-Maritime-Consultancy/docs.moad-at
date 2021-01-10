@@ -1,5 +1,7 @@
 .. _export:
 
+.. |icon_exportAnno| image:: _static/images/icons/exportAnno.png 
+
 어노테이션 결과 산출
 ===================================================
 
@@ -8,6 +10,7 @@
 
 산출 형식 지정
 ---------------------
+
 .. image:: _static/images/screenshots/exportSettingScreen.png
     :align: center
     :alt: JSON 산출 설정 화면
@@ -27,4 +30,10 @@ MOAD의 JSON 형식은 아래의 JSON schema 형식으로 정의됩니다.
 
 '세그먼트 어노테이션 이미지(PNG) 포함' 활성화 시 세그먼트 어노테이션 결과가 PNG 파일로 산출됩니다.
 
+JSON 파일로 산출하기
+------------------------------
+
+실제 결과물 산출은 다각형 혹은 세그먼트 어노테이션 편집 시에만 가능합니다. 각 편집기에서 |icon_exportAnno| 버튼을 누르면 다각형 및 세그먼트 어노테이션의 결과가 상기 설정을 따라 산출됩니다.
+
+해당 산출믈은 '대상 연결 폴더'의 새로 생성되는 'moad-json-export' 폴더 내에 저장됩니다.
 
