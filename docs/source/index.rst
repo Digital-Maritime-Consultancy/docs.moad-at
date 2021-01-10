@@ -1,32 +1,19 @@
-MOAD 어노테이션 도구 사용자 매뉴얼
+.. MOAD annotation tool documentation master file, created by
+   sphinx-quickstart on Sun Jan 10 19:17:41 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to MOAD annotation tool's documentation!
 ================================================
 
-본 문서는 해양객체 이미지 AI 데이터 (MOAD) 프로젝트의 어노테이션 도구에 대한 온라인 메뉴얼입니다.
-
-본 문서를 처음 보시는 분이시라면 :ref:`도구 소개<overview>` 페이지를 먼저 보시기를 권장드립니다.
-
-
-문서 관리자: 정진기 (jinki_at_dmc.international)
-
-
 .. toctree::
-   :maxdepth: 1
-   :caption: 목 차:
+   :maxdepth: 2
+   :caption: Contents:
 
-   overview
-   prerequisite
-   project
-   projectFiles
-   projectCreation
-   annotation
-   geometryAnnotation
-   segmentAnnotation
-   imageMetadata
-   export
-   segmentationDataGeneration
 
-길잡이
---------
+
+Indices and tables
+==================
 
 * :ref:`genindex`
 * :ref:`modindex`

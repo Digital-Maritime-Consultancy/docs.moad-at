@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'MOAD Annotation Tool'
-copyright = '2020, Jinki Jung'
-author = 'Jinki Jung'
+project = 'MOAD annotation tool'
+copyright = '2021, Digital Maritime Consultancy ApS'
+author = 'Digital Maritime Consultancy ApS'
 
 # The full version, including alpha/beta/rc tags
-release = '0.6'
+release = '0.6.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -60,7 +60,3 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-html_css_files = [
-    'css/css-style.css',
-]
