@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>어노테이션 결과 산출 &#8212; MOAD Annotation Tool 0.6 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/css-style.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="세그멘테이션 데이터 생성" href="segmentationDataGeneration.html" />
+    <link rel="prev" title="이미지 메타데이터 편집" href="imageMetadata.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>어노테이션 결과 산출<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>본 페이지에선 어노테이션 결과를 MOAD 프로젝트에서 지정된 JSON 형식으로 산출하기 위한 방법을 서술합니다.</p>
+<div class="section" id="id2">
+<h2>산출 형식 지정<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<img alt="JSON 산출 설정 화면" class="align-center" src="_images/exportSettingScreen.png" />
+<p>현재 모든 프로젝트는 MOAD JSON 형식을 기본 산출 형식으로 사용하고 있습니다.</p>
+<p>'레이블 이미지 포함' 활성화 시 원본 작업 이미지도 함께 산출됩니다.</p>
+<p>상기 설정 중 '개별 파일로 산출'이 활성화 되어 있으면 각 이미지의 다각형 및 세그먼트 어노테이션 결과가 하기의 형식을 따라 개별 파일로 저장됩니다.</p>
+<p>MOAD의 JSON 형식은 아래의 JSON schema 형식으로 정의됩니다.</p>
+<ul class="simple">
+<li><p>다각형 어노테이션: <a class="reference external" href="https://github.com/Digital-Maritime-Consultancy/docs.moad-at/blob/master/docs/source/_static/codes/moad_BBPG_data_schema.json">https://github.com/Digital-Maritime-Consultancy/docs.moad-at/blob/master/docs/source/_static/codes/moad_BBPG_data_schema.json</a></p></li>
+<li><p>세그먼트 어노테이션: <a class="reference external" href="https://github.com/Digital-Maritime-Consultancy/docs.moad-at/blob/master/docs/source/_static/codes/moad_PS_data_schema.json">https://github.com/Digital-Maritime-Consultancy/docs.moad-at/blob/master/docs/source/_static/codes/moad_PS_data_schema.json</a></p></li>
+</ul>
+<p>'개별 파일로 산출' 비활성화 시 모든 어노테이션 결과는 한 파일에 저장되어 산출됩니다.</p>
+<p>'세그먼트 어노테이션 이미지(PNG) 포함' 활성화 시 세그먼트 어노테이션 결과가 PNG 파일로 산출됩니다.</p>
+</div>
+<div class="section" id="json">
+<h2>JSON 파일로 산출하기<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<p>실제 결과물 산출은 다각형 혹은 세그먼트 어노테이션 편집 시에만 가능합니다. 각 편집기에서 <img alt="icon_exportAnno" src="_images/exportAnno.png" /> 버튼을 누르면 다각형 및 세그먼트 어노테이션의 결과가 상기 설정을 따라 산출됩니다.</p>
+<p>해당 산출믈은 '대상 연결 폴더'의 새로 생성되는 'moad-json-export' 폴더 내에 저장됩니다.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">MOAD Annotation Tool</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">목 차:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">도구 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisite.html">어노테이션 작업 전 준비 사항</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">프로젝트 관리</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectFiles.html">프로젝트 파일</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectCreation.html">프로젝트 생성</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotation.html">어노테이션</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometryAnnotation.html">다각형 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="segmentAnnotation.html">세그먼트 어노테이션 편집</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imageMetadata.html">이미지 메타데이터 편집</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">어노테이션 결과 산출</a></li>
+<li class="toctree-l1"><a class="reference internal" href="segmentationDataGeneration.html">세그멘테이션 데이터 생성</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="imageMetadata.html" title="previous chapter">이미지 메타데이터 편집</a></li>
+      <li>Next: <a href="segmentationDataGeneration.html" title="next chapter">세그멘테이션 데이터 생성</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Digital Maritime Consultancy ApS.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/export.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

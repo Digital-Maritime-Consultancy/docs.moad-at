@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MOAD Annotation Tool'
-copyright = '2020, Jinki Jung'
-author = 'Jinki Jung'
+copyright = '2020, Digital Maritime Consultancy ApS'
+author = 'Digital Maritime Consultancy ApS'
 
 # The full version, including alpha/beta/rc tags
 release = '0.6'
