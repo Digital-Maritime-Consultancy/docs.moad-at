@@ -8,7 +8,6 @@ MOAD 어노테이션 도구 사용자 매뉴얼
 
 문서 관리자: 정진기 (jinki_at_dmc.international)
 
-
 .. toctree::
    :maxdepth: 1
    :caption: 목 차:
