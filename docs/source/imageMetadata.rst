@@ -3,7 +3,7 @@
 이미지 메타데이터 편집
 ===================================================
 
-.. image:: _static/images/imageMetadataScreen.png
+.. image:: _static/images/screenshots/imageMetadataScreen.png
     :align: center
     :alt: 이미지 메타데이터 편집 스크린샷
 

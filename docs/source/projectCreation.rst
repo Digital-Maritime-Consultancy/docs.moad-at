@@ -9,7 +9,7 @@
 
 좌측 하단의 톱니 바퀴 모양의 아이콘을 눌러 보안 토큰 관리 화면으로 이동 후, 이름을 기입하여 보안 토큰을 생성합니다.
 
-.. image:: _static/images/securityTokenScreen.png
+.. image:: _static/images/screenshots/securityTokenScreen.png
     :align: center
     :alt: 보안 토큰 설정 화면
 
@@ -18,7 +18,7 @@
 새로운 프로젝트 생성
 ---------------------
 
-.. image:: _static/images/initialScreen.png
+.. image:: _static/images/screenshots/initialScreen.png
     :align: center
     :alt: 프로젝트 초기 실행화면
 
@@ -26,7 +26,7 @@
 
 이 중 프로젝트 생성 버튼을 눌러 프로젝트의 상세 정보 입력 페이지로 이동합니다.
 
-.. image:: _static/images/projectCreatePage.PNG
+.. image:: _static/images/screenshots/projectCreatePage.PNG
     :align: center
     :alt: 프로젝트 정보 입력 화면
 
@@ -43,7 +43,7 @@
 
 태그 정보에는 아래 그림과 같이 프로젝트에서 활용할 어노테이션 태그 목록을 추가하실 수 있습니다.
 
-.. image:: _static/images/projectCreateTag.PNG
+.. image:: _static/images/screenshots/projectCreateTag.PNG
     :align: center
     :alt: 프로젝트 태그 목록 입력 화면
 
