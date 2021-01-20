@@ -19,3 +19,4 @@
  * 이미지 메타데이터 (.json): MOAD 프로젝트에서 사용되는 이미지 별 메타데이터. 메타데이터 연결 폴더에 저장됨.
 
     * :download:`이미지 메타데이터 JSON 스키마 <./_static/jsonSchema/image_metadata_schema.json>`
+

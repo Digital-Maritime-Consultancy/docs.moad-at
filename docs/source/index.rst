@@ -24,7 +24,7 @@ MOAD 어노테이션 도구 사용자 매뉴얼 - v |version|
    segmentAnnotation
    imageMetadata
    export
-   segmentationDataGeneration
+   segmentCanvasGeneration
    dataFormat
 
 길잡이
