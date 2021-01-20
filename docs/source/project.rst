@@ -7,6 +7,8 @@
 
 새로운 프로젝트 생성에 대해서는 :ref:`프로젝트 생성<projectCreation>` 페이지를 참고해주세요.
 
+프로젝트와 관련된 입출력 파일은 :ref:`프로젝트 파일<projectFiles>` 페이지를 참고해주세요.
+
 
 프로젝트 불러오기
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -19,7 +21,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 프로그램 초기 실행 화면의 우측 '최근 프로젝트' 탭에서 프로젝트 이름을 선택하면 가장 최근에 저장된 프로젝트를 불러옵니다.
 
-.. figure:: _static/images/projectLoad.png
+.. figure:: _static/images/screenshots/projectLoad.png
     :align: center
     :alt: 최근 프로젝트 불러오기 화면
     
