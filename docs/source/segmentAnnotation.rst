@@ -4,7 +4,7 @@
 .. |icon_annoSeg| image:: _static/images/icons/annoSeg.png  
 .. |icon_remoSeg| image:: _static/images/icons/remoSeg.png  
 .. |icon_remoAll| image:: _static/images/icons/remoAll.png  
-.. |icon_actLearn| image:: _static/images/icons/actLearn.png   
+.. |icon_showBoundary| image:: _static/images/icons/showBoundary.png   
 .. |icon_prev| image:: _static/images/icons/prev.png  
 .. |icon_next| image:: _static/images/icons/next.png  
 .. |icon_saveProj| image:: _static/images/icons/saveProj.png  
@@ -50,7 +50,7 @@
 * |icon_annoSeg|: 어노테이션 생성, 마우스 왼쪽 버튼 드래그를 이용하여 (D)에서 선택된 태그에 대한 어노테이션을 생성합니다.
 * |icon_remoSeg|: 어노테이션 제거, 마우스 왼쪽 버튼 드래그를 이용하여 어노테이션을 제거합니다.
 * |icon_remoAll|: 모든 어노테이션 제거, 모든 세그먼트의 어노테이션을 제거합니다.
-* |icon_actLearn|: 자동 어노테이션, 현재 버전에선 사용 불가합니다.
+* |icon_showBoundary|: 세그먼트 외곽선 보이기/숨기기
 * |icon_prev|: 이전 어셋, 이전 이미지 및 작업으로 이동합니다.
 * |icon_next|: 다음 어셋, 다음 이미지 및 작업으로 이동합니다.
 * |icon_saveProj|: 프로젝트 저장, 프로젝트를 저장합니다.
