@@ -58,6 +58,27 @@ svg 파일들은 프로젝트 내 'svg' 폴더에 생성됩니다.
 
 세그먼트 캔버스 생성 시 COCO의 어노테이션을 MOAD 프로젝트의 컨텍스트에 맞춰 변화시켜줄 매핑이 필요하며, 이 매핑 정보는 프로젝트 내의 'coco-moad.json' 의 내용을 참조합니다.
 
+.. code-block:: json
+    :caption: coco-moad.json 예제
+    
+    {
+        "mapping": {
+            "sea": "바다",
+            "water-other": "바다",
+            "mountain-merged": "섬"
+        },
+        "categories": [
+            {
+            "name": "바다",
+            "color": "#494DAE"
+            },
+            {
+            "name": "섬",
+            "color": "#40AA40"
+            }
+        ]
+    }
+
 따라서 COCO 어노테이션을 추가적으로 MOAD의 어노테이션으로 매핑하거나 해당 어노테이션의 색을 지정하는 등의 작업을 통해 상기의 일치성 문제를 해결해야 합니다.
 
 보다 자세한 내용은 하기의 내용을 참조해주세요.
