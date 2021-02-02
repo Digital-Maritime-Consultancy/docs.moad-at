@@ -4,11 +4,14 @@
 .. |icon_annoSeg| image:: _static/images/icons/annoSeg.png  
 .. |icon_remoSeg| image:: _static/images/icons/remoSeg.png  
 .. |icon_remoAll| image:: _static/images/icons/remoAll.png  
-.. |icon_actLearn| image:: _static/images/icons/actLearn.png   
+.. |icon_showBoundary| image:: _static/images/icons/showBoundary.png   
 .. |icon_prev| image:: _static/images/icons/prev.png  
 .. |icon_next| image:: _static/images/icons/next.png  
 .. |icon_saveProj| image:: _static/images/icons/saveProj.png  
 .. |icon_exportAnno| image:: _static/images/icons/exportAnno.png 
+.. |tag_edit_button| image:: _static/images/screenshots/tag-edit-button.png
+.. |tag_edit_text| image:: _static/images/screenshots/tag-edit-text.png
+.. |tag_edit_color| image:: _static/images/screenshots/tag-edit-color.png
 
 세그먼트 어노테이션 편집
 ===================================================
@@ -50,7 +53,7 @@
 * |icon_annoSeg|: 어노테이션 생성, 마우스 왼쪽 버튼 드래그를 이용하여 (D)에서 선택된 태그에 대한 어노테이션을 생성합니다.
 * |icon_remoSeg|: 어노테이션 제거, 마우스 왼쪽 버튼 드래그를 이용하여 어노테이션을 제거합니다.
 * |icon_remoAll|: 모든 어노테이션 제거, 모든 세그먼트의 어노테이션을 제거합니다.
-* |icon_actLearn|: 자동 어노테이션, 현재 버전에선 사용 불가합니다.
+* |icon_showBoundary|: 세그먼트 외곽선 보이기/숨기기
 * |icon_prev|: 이전 어셋, 이전 이미지 및 작업으로 이동합니다.
 * |icon_next|: 다음 어셋, 다음 이미지 및 작업으로 이동합니다.
 * |icon_saveProj|: 프로젝트 저장, 프로젝트를 저장합니다.
@@ -58,28 +61,34 @@
 
 어노테이션 태그 선택 - 인터페이스 (D)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-인터페이스의 (D) 영역을 통해 어노테이션 태그를 적용할 수 있습니다. 하나의 영역은 하나의 태그만 적용이 가능합니다.
+|icon_annoSeg| 가 선택된 상태에서 인터페이스의 (D) 영역의 태그 선택을 통해 어노테이션 태그를 적용할 수 있습니다. 하나의 영역은 하나의 태그만 적용이 가능합니다. 
+
+어노테이션 태그 편집 - 인터페이스 (D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+어노테이션 태그는 태그가 선택된 상태에서 아래 그림에 표기된 편집 버튼을 누름으로써 편집할 수 있습니다.
+
+|tag_edit_button|
+
+어노테이션 태그의 값을 바꾸고 싶을 땐 태그의 글자 부분을 클릭한 후 편집 버튼을 눌러 편집을 수행합니다.
+
+|tag_edit_text|
+
+어노테이션 태그의 색을 바꾸고 싶을 땐 태그의 색 부분을 클릭한 후 편집 버튼을 눌렀을 때 보여지는 팔레트의 색을 골라 편집을 수행합니다.
+
+|tag_edit_color|
 
 
-어노테이션 생성 - 인터페이스 (E)
+어노테이션 편집 - 인터페이스 (E)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-상기 편집 도구 중 |icon_annoSeg| 가 선택된 상태에서 마우스 왼쪽 드래그를 통해 상기 단계에서 선택된 어노테이션을 세그먼트에 마킹합니다.
-
-
-어노테이션 삭제 - 인터페이스 (E)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-상기 편집 도구 중 |icon_remoSeg| 가 선택된 상태에서 마우스 왼쪽 드래그를 통해 해당 세그먼트의 어노테이션을 삭제합니다.
-상기 편집 도구 중 |icon_annoSeg| 가 선택된 상태에서도 마우스 오른쪽 드래그를 이용해 같은 작업을 수행할 수 있습니다.
-
-어노테이션 선택 - 인터페이스 (E)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|icon_select| 아이콘을 눌러 세그먼트의 어노테이션을 선택합니다. 
-
+어노테이션 생성은 상기 편집 도구 중 |icon_annoSeg| 가 선택된 상태에서 마우스 왼쪽 드래그를 하여 상기 단계에서 선택된 어노테이션을 세그먼트에 할당하여 수행합니다.
+어노테이션 삭제는 상기 편집 도구 중 |icon_remoSeg| 가 선택된 상태에서 마우스 왼쪽 드래그를 통해 수행할 수 있습니다. 상기 편집 도구 중 |icon_annoSeg| 가 선택된 상태에서도 마우스 오른쪽 드래그를 이용해 삭제할 수 있습니다.
+|icon_select| 이 선택된 상태에서 특정 세그먼트를 클릭하여 세그먼트의 어노테이션을 선택할 수 있습니다.
 어노테이션이 선택되었을 때 인터페이스의 (D) 영역은 해당 어노테이션 태그 값을, 인터페이스의 (F) 영역은 해당 어노테이션 속성 값을 표출합니다.
 
 어노테이션 속성 편집 - 인터페이스 (F)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 어노테이션이 선택된 상태에서 인터페이스의 (F) 영역을 통해 어노테이션 속성을 편집할 수 있습니다. 해당 영역은 어노테이션이 선택되었을 때만 활성화됩니다. 편집 후 반드시 하단의 submit 버튼을 눌러 저장을 수행합니다.
+
 
 단축키
 ------------------
