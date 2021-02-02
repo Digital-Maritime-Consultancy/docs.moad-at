@@ -20,10 +20,10 @@ import os
 project = 'MOAD annotation tool'
 copyright = '2021, Digital Maritime Consultancy ApS'
 author = 'Jinki Jung'
-version= "0.7.0"
+version= "0.7.1"
 
 # The full version, including alpha/beta/rc tags
-release = '0.7.0'
+release = '0.7.1'
 
 
 # -- General configuration ---------------------------------------------------
