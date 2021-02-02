@@ -14,6 +14,9 @@
 .. |icon_next| image:: _static/images/icons/next.png  
 .. |icon_saveProj| image:: _static/images/icons/saveProj.png  
 .. |icon_exportAnno| image:: _static/images/icons/exportAnno.png 
+.. |tag_edit_button| image:: _static/images/screenshots/tag-edit-button.png
+.. |tag_edit_text| image:: _static/images/screenshots/tag-edit-text.png
+.. |tag_edit_color| image:: _static/images/screenshots/tag-edit-color.png
 
 다각형 어노테이션 편집
 ===================================================
@@ -63,6 +66,24 @@
 * |icon_next|: 다음 어셋, 다음 이미지 및 작업으로 이동합니다.
 * |icon_saveProj|: 프로젝트 저장, 프로젝트를 저장합니다.
 * |icon_exportAnno|: 프로젝트 내보내기, 프로젝트 산출물을 생성합니다. 자세한 내용은 :ref:`어노테이션 결과 JSON 파일 산출<export>` 참조해주세요.
+
+어노테이션 태그 선택 - 인터페이스 (D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+인터페이스의 (D) 영역의 태그 선택을 통해 어노테이션 태그를 적용할 수 있습니다. 하나의 영역은 하나의 태그만 적용이 가능합니다. 
+
+어노테이션 태그 편집 - 인터페이스 (D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+어노테이션 태그는 태그가 선택된 상태에서 아래 그림에 표기된 편집 버튼을 누름으로써 편집할 수 있습니다.
+
+|tag_edit_button|
+
+어노테이션 태그의 값을 바꾸고 싶을 땐 태그의 글자 부분을 클릭한 후 편집 버튼을 눌러 편집을 수행합니다.
+
+|tag_edit_text|
+
+어노테이션 태그의 색을 바꾸고 싶을 땐 태그의 색 부분을 클릭한 후 편집 버튼을 눌렀을 때 보여지는 팔레트의 색을 골라 편집을 수행합니다.
+
+|tag_edit_color|
 
 영역 생성 - 인터페이스 (E)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

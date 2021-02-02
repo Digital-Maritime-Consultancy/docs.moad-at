@@ -9,6 +9,9 @@
 .. |icon_next| image:: _static/images/icons/next.png  
 .. |icon_saveProj| image:: _static/images/icons/saveProj.png  
 .. |icon_exportAnno| image:: _static/images/icons/exportAnno.png 
+.. |tag_edit_button| image:: _static/images/screenshots/tag-edit-button.png
+.. |tag_edit_text| image:: _static/images/screenshots/tag-edit-text.png
+.. |tag_edit_color| image:: _static/images/screenshots/tag-edit-color.png
 
 세그먼트 어노테이션 편집
 ===================================================
@@ -60,6 +63,21 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |icon_annoSeg| 가 선택된 상태에서 인터페이스의 (D) 영역의 태그 선택을 통해 어노테이션 태그를 적용할 수 있습니다. 하나의 영역은 하나의 태그만 적용이 가능합니다. 
 
+어노테이션 태그 편집 - 인터페이스 (D)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+어노테이션 태그는 태그가 선택된 상태에서 아래 그림에 표기된 편집 버튼을 누름으로써 편집할 수 있습니다.
+
+|tag_edit_button|
+
+어노테이션 태그의 값을 바꾸고 싶을 땐 태그의 글자 부분을 클릭한 후 편집 버튼을 눌러 편집을 수행합니다.
+
+|tag_edit_text|
+
+어노테이션 태그의 색을 바꾸고 싶을 땐 태그의 색 부분을 클릭한 후 편집 버튼을 눌렀을 때 보여지는 팔레트의 색을 골라 편집을 수행합니다.
+
+|tag_edit_color|
+
+
 어노테이션 편집 - 인터페이스 (E)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 어노테이션 생성은 상기 편집 도구 중 |icon_annoSeg| 가 선택된 상태에서 마우스 왼쪽 드래그를 하여 상기 단계에서 선택된 어노테이션을 세그먼트에 할당하여 수행합니다.
@@ -70,6 +88,7 @@
 어노테이션 속성 편집 - 인터페이스 (F)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 어노테이션이 선택된 상태에서 인터페이스의 (F) 영역을 통해 어노테이션 속성을 편집할 수 있습니다. 해당 영역은 어노테이션이 선택되었을 때만 활성화됩니다. 편집 후 반드시 하단의 submit 버튼을 눌러 저장을 수행합니다.
+
 
 단축키
 ------------------
