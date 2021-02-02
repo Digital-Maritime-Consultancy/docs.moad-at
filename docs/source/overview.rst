@@ -1,5 +1,7 @@
 .. _overview:
 
+.. |icon_exportAnno| image:: _static/images/icons/exportAnno.png 
+
 도구 소개
 ==========
 
@@ -101,13 +103,15 @@
 
 본 어노테이션 도구는 부가적으로 MOAD 프로젝트에서 정의된 이미지의 메타데이터를 확인하고 편집하는 기능도 함께 제공됩니다.
 
-어노테이션 작업 순서는 다음과 같습니다.
+
+어노테이션 작업 수행
+----------------------------
+본 어노테이션 도구를 기반한 어노테이션 작업 순서는 다음과 같습니다.
 
 1. :ref:`사전 준비<prerequisite>`
 2. :ref:`다각형 어노테이션 수행<geometryAnnotation>`
 3. :ref:`세그먼트 어노테이션 수행<segmentAnnotation>`
 4. :ref:`이미지 메타데이터 편집 및 확인<imageMetadata>`
-5. :ref:`어노테이션 결과 JSON 파일 산출<export>`
-6. 검수
-
-본 어노테이션 도구는 Microsoft 사의 Visual Object Tagging Tool (VoTT)를 기반으로 만들었습니다. (프로젝트 링크: https://github.com/microsoft/VoTT)
+5. :ref:`어노테이션 결과 JSON 파일 산출 설정<export>`
+6. 다각형 또는 세그먼트 어노테이션 편집 화면에서 |icon_exportAnno| 버튼을 눌러 산출 수행
+7. 산출 결과 검수

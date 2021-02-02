@@ -7,6 +7,7 @@ MOAD 어노테이션 도구 사용자 매뉴얼 - v |version|
 
 본 문서를 처음 보시는 분이시라면 :ref:`도구 소개<overview>` 페이지를 먼저 보시기를 권장드립니다.
 
+본 어노테이션 도구는 Microsoft 사의 Visual Object Tagging Tool (VoTT)를 기반으로 만들어졌습니다. (프로젝트 링크: https://github.com/microsoft/VoTT)
 
 문서 관리자: 정진기 (jinki_at_dmc.international)
 
